@@ -49,7 +49,7 @@ function Login(){
                                 <div className="mt-3">
                                     <div className="d-flex justify-content-center links">
                                         Don't have an account?
-                                        <Link to="/extra-pages/sign-up" className="text-primary ml-2">Sign Up</Link>
+                                        <Link to="/register" className="text-primary ml-2">Sign Up</Link>
                                     </div>
                                     <div className="d-flex justify-content-center links">
                                         <Link to="/extra-pages/recover-pswd" className="f-link">
