@@ -20,5 +20,4 @@ const LayoutsRoute = props => {
         </Routes>
     )
 }
-
 export default LayoutsRoute

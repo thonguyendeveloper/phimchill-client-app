@@ -1,12 +1,8 @@
 import {useLocation} from 'react-router-dom'
 import {TransitionGroup,CSSTransition} from "react-transition-group";
 
-
-
 const Layout1Route = () => {
-
     let location = useLocation();
-
     return (
         <TransitionGroup>
             <CSSTransition
@@ -52,5 +48,4 @@ const Layout1Route = () => {
         </TransitionGroup>
     )
 }
-
 export default Layout1Route

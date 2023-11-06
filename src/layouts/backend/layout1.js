@@ -3,14 +3,10 @@ import {Link} from 'react-router-dom'
 // Partials
 import HeaderStyle1 from '../../components/partials/backend/headerstyle/headerstyle1';
 import FooterStyle from '../../components/partials/backend/footerstyle/footerstyle'
-
 // Router Component
 import Layout1Route from '../../router/layout1-route'
 
 const Layout1 = () => {
-
-
-
 const backToTop = document.getElementById("back-to-top")
 // console.log(backToTop)
 if( backToTop !== null && backToTop !== undefined ) {
@@ -30,12 +26,8 @@ document.querySelector('#top').addEventListener('click', (e) => {
   window.scrollTo({top: 0, behavior: 'smooth'});
 })
 }
-
-
-
     return(
         <>
-           
              <div id="back-to-top">
             <Link className="top"   to="#" id="top"> <i className="fa fa-angle-up"></i> </Link>
             </div>

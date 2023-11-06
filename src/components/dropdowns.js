@@ -12,7 +12,6 @@ const CustomToggle = React.forwardRef(({ children,variant, onClick }, ref) => (
       className={variant}
     >
       {children}
-      
     </Link>
 ));
   export default CustomToggle;
