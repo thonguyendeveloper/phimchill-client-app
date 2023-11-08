@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from "react";
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import authApi from "../../api/authApi/exportAuthApi";
+
+
 
 function Login(){
     const [show, setShow] = useState(false);
@@ -25,6 +28,15 @@ function Login(){
             setErrorPass(!regex.test(Pass));
         }
     }, [focusPass, Pass]);
+
+    const LoginButton = async () => {
+        const data = await authApi.Login({
+            email: Email,
+            password : Pass,
+        });
+        console.log(data);
+    }
+
 
     return (
         <>
@@ -66,7 +78,7 @@ function Login(){
                                             <div style={{color: '#e87c03'}} hidden={!errorPass}>Mật khẩu của bạn phải chứa từ 8 ký tự, có ít nhất 1 ký tự hoa, 1 ký tự đặc biệt.</div>
                                             <br/>
                                             <div className="sign-info">
-                                                <Button className="btn btn-hover btn-primary1" >Sign in</Button>
+                                                <Button onClick={LoginButton} className="btn btn-hover btn-primary1" >Sign in</Button>
                                                 <div className="custom-control custom-checkbox d-inline-block">
                                                     <input type="checkbox" className="custom-control-input" id="customCheck"/>
                                                     <label className="custom-control-label" htmlFor="customCheck">Remember Me</label>
