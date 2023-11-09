@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 // Partials
-import HeaderStyle1 from '../../components/partials/backend/headerstyle/headerstyle1';
-import FooterStyle from '../../components/partials/backend/footerstyle/footerstyle'
+import HeaderStyle1 from '../components/partials/backend/headerstyle/headerstyle1';
+import FooterStyle from '../components/partials/backend/footerstyle/footerstyle'
 // Router Component
-import Layout1Route from '../../router/layout1-route'
+import Layout1Route from '../router/layout1-route'
+import {CSSTransition, TransitionGroup} from "react-transition-group";
 
-const Layout1 = () => {
+const DefaultLayout = ({ children }) => {
 const backToTop = document.getElementById("back-to-top")
 // console.log(backToTop)
 if( backToTop !== null && backToTop !== undefined ) {
@@ -34,13 +35,21 @@ document.querySelector('#top').addEventListener('click', (e) => {
             <div className="wraper">
                 <HeaderStyle1 />
                 <div className="content-page" id="content-page">
-                    <Layout1Route />
+                    <TransitionGroup>
+                        <CSSTransition
+                            // key={location.key}
+                            classNames="fade"
+                            timeout={300}
+                        >
+                            {children}
+                        </CSSTransition>
+                    </TransitionGroup>
                 </div>
             </div>
-            {/*<FooterStyle />*/}
+            <FooterStyle />
         </>
     )
 }
 
 
-export default Layout1;
+export default DefaultLayout;
