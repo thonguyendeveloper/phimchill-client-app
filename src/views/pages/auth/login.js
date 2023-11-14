@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import authApi from "../../api/authApi/exportAuthApi";
+import authApi from "../../../api/authApi/exportAuthApi";
 
 
 

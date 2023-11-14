@@ -119,7 +119,7 @@ function SignUp() {
                 <div className="mt-3">
                   <div className="d-flex justify-content-center links">
                     Already have an account?{" "}
-                    <a href="/login" className="text-primary ml-2">
+                    <a href="/auth/login" className="text-primary ml-2">
                       Sign In
                     </a>
                   </div>
