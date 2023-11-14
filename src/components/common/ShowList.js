@@ -60,7 +60,7 @@ const ShowList = () => {
                                         <ul className="list-inline p-0 m-0 music-play-lists">
                                             <li className="share">
                                                 <span>
-                                                    <i className="ri-share-fill" />
+                                                    <i className="ri-share-fill" />n  
                                                 </span>
                                                 <div className="share-box">
                                                     <div className="d-flex align-items-center">
